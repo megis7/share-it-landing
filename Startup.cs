@@ -33,7 +33,7 @@ namespace shareit
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-                var connection = @"Data Source=~/Desktop/shareit/shareit-db.db;";
+                var connection = @"Data Source=../shareit-db.sqlite;";
                 services.AddDbContext<ShareItContext>(options => options.UseSqlite(connection));
 
 
