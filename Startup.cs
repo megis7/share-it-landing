@@ -33,7 +33,7 @@ namespace shareit
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-                var connection = @"Data Source=../shareit-db.sqlite;";
+                var connection = @"Data Source=wwwroot/shareit-db.sqlite;";
                 services.AddDbContext<ShareItContext>(options => options.UseSqlite(connection));
 
 
@@ -41,7 +41,7 @@ namespace shareit
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ShareItContext context)
         {
             if (env.IsDevelopment())
             {
@@ -63,6 +63,8 @@ namespace shareit
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            DbSeeder.Initialize(context);
         }
     }
 }
