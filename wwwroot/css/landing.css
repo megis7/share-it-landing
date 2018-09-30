@@ -21,7 +21,7 @@ html, body {
 
 #carousel-overlay-div > .carousel-overlay {
     position: absolute;
-    left:4%;
+    /* left:4%; */
     z-index:1;
 }
 
@@ -50,9 +50,9 @@ html, body {
     margin-left: -5%;
 } */
 
-/* Hide/rearrange for smaller screens
-@media screen and (max-width: 767px) {
-    .carousel-caption {
-        display: none;
+
+@media screen and (max-width: 574px) {
+    .mobile-margin {
+        margin: 0 3%;
     }
-} */
+}
