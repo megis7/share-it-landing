@@ -24,6 +24,11 @@ namespace shareit.Controllers
             return View();
         }
 
+        public IActionResult Subscribe()
+        {
+            return View("Subscribe");
+        }
+
         [HttpPost, ValidateAntiForgeryToken]
         public IActionResult Subscribe(string email)
         {

@@ -34,11 +34,11 @@ html, body {
 }
 
 .moderate-text {
-    font-size: 1.4vw;
+    font-size: 1.4vmax;
 }
 
 .small-text {
-    font-size: 1.2vw;
+    font-size: 1.2vmax;
 }
 
 .rounded-corners {
@@ -50,9 +50,9 @@ html, body {
     margin-left: -5%;
 } */
 
-/* Hide/rearrange for smaller screens */
+/* Hide/rearrange for smaller screens
 @media screen and (max-width: 767px) {
     .carousel-caption {
         display: none;
     }
-}
+} */
