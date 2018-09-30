@@ -45,26 +45,29 @@
                                 <div class="row" style="height: 1em;"></div>
                                 <div class="row" style="height: 1em;"></div>
 
-                                <div class="row justify-content-center">
-                                    <p class="no-select black-text text-center">
+                                <div class="row justify-content-center" style="margin-bottom: -1vmax">
+                                    <p class="no-select black-text">
                                     Our services are still under development.</p>
                                 </div>
 
                                 <div class="row justify-content-center">
-                                    <p class="no-select black-text text-center">
+                                    <p class="no-select black-text">
                                     Subscribe and get notified when we are ready.</p>
                                 </div>
 
                                 <div class="row justify-content-center">
-                                    <form method="POST" asp-action="Subscribe" asp-controller="Home">
+                                    <form method="POST" asp-action="Subscribe" asp-controller="Home" class="w-100">
                                         <div class="col">
                                             <div class="row">
-                                                <div class="form-group">
-                                                    <input name="email" type="email" class="small-text form-control" placeholder="email@example.com">
+                                                <div class="form-group col">
+                                                    <input name="email" type="email" class="small-text form-control d-none d-sm-block" placeholder="email@example.com">
+                                                    <input name="email" type="email" class="small-text form-control d-sm-none form-control-sm" placeholder="email@example.com">
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <input type="submit" style="padding: 2px 0px;" class="btn btn-success small-text w-100" value="Get Notified"/>
+                                                <div class="col">
+                                                    <input type="submit" style="padding: 2px 0px;" class="btn btn-success small-text w-100" value="Get Notified"/>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>     
