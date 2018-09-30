@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using shareit.Models;
 using shareit.Models.Database;
 
@@ -42,11 +43,10 @@ namespace shareit.Controllers
             return View("Subscribe");
         }
 
-        public IActionResult About()
+        public IActionResult Data()
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            var emails = JsonConvert.SerializeObject(context.Subscribers.ToList());
+            return View((object)emails);
         }
 
         public IActionResult Contact()
