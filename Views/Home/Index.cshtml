@@ -7,40 +7,38 @@
 }
 
 <div id="carousel-overlay-div" class="row w-100 h-100">
-    <div class="container-fluid flex-column d-flex carousel-overlay h-100">
+    <div class="col flex-column d-flex carousel-overlay h-100">
 
         <div class="row align-items-center h-50 mx-md-4">
             <div class="col">
                 <div class="row">
-                    <p class="no-select white-text shinny-text text-md-left text-center col orbitron-font">
+                    <p class="no-select white-text shinny-text text-lg-left text-center col orbitron-font">
                         Rent your special equipment anywhere
                     </p>
                 </div>
             
                 <div class="row">
-                    <p class="no-select white-text shinny-text text-md-left text-center col orbitron-font">
+                    <p class="no-select white-text shinny-text text-lg-left text-center col orbitron-font">
                     Pay low and Travel light</p>
                 </div>
 
                 <div class="row">
-                    <p class="no-select white-text shinny-text text-md-left text-center col orbitron-font">
+                    <p class="no-select white-text shinny-text text-lg-left text-center col orbitron-font">
                     Have Fun</p>
                 </div>
             </div>
-        </div>        
+        </div>
 
-        <div class="row align-items-center h-100 mx-sm-5 mobile-margin">
+        <div class="row align-items-md-center h-100 mx-sm-5 mobile-margin">
 
-            <div class="col h-50 d-flex align-items-end">
+            <div class="col-md-7 col-xs-12 d-flex align-items-start">
                 <div class="row flex-fill d-flex">
-                    <div class="card col-md-8 small-text rounded-corners" style="background-color: rgba(133, 133, 133, 0.75);">
+                    <div class="card col-lg-9 small-text rounded-corners" style="background-color: rgba(133, 133, 133, 0.75);">
                         <div class="card-body">
                             <div class="card-text">
                                 <div class="row justify-content-center">
+                                    <img src="~/images/logo.svg" style="width: 150px; height: 100px;" class="img-fluid" alt="Share It"/>
                                     <p class="no-select black-text small-text text-center moderate-text">
-                                        <span asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" style="z-index: 99;">
-                                            <img src="~/images/logo2.svg" style="width: 100px;" alt="Share It"/>
-                                        </span> 
                                     Everyone can <em>Share It</em>, anyone can rent it.<br>Welcome to the Airbnb of clothing and athletic equipment.</p>
                                 </div>
 
@@ -82,7 +80,7 @@
                 </div>
             </div>
 
-            <div class="col h-100 d-flex align-items-end">
+            <div class="col-md-5 col-xs-12 d-flex align-items-baseline">
 
                 <div class="col">
                 <div class="row">
@@ -97,7 +95,7 @@
 </div>
 
 <!-- Carousel -->
-<div class="row flex-fill d-flex" style="overflow: hidden;">
+<div class="row flex-fill d-flex h-100" style="overflow: hidden; margin-right:0">
     <div id="myCarousel" class="carousel slide w-100" data-ride="carousel" data-pause="false" data-interval="3000" >
         <div class="carousel-inner w-100 h-100" >
             <div class="carousel-item h-100 active"><img class="d-block w-100 h-100" src="~/images/jet_ski.jpg"></div>
