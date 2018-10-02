@@ -50,13 +50,18 @@ html, body {
     font-family: Orbitron;
 }
 
-/* .in-carousel .row {
-    margin-left: -5%;
-} */
-
-
-@media screen and (max-width: 574px) {
+@media screen and (max-width: 576px) {
     .mobile-margin {
         margin: 0 3%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .small-text {
+        font-size: 1.5vmax;
+    }
+
+    .smaller-text-mobile {
+        font-size: 1.3vmax;
     }
 }
