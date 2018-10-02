@@ -46,6 +46,10 @@ html, body {
     border: 2px solid rgba(133, 133, 133, 0.75);
 }
 
+.orbitron-font {
+    font-family: Orbitron;
+}
+
 /* .in-carousel .row {
     margin-left: -5%;
 } */
