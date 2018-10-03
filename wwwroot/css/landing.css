@@ -50,18 +50,30 @@ html, body {
     font-family: Orbitron;
 }
 
+.shinny-height {
+    height: 50%;
+}
+
 @media screen and (max-width: 576px) {
     .mobile-margin {
         margin: 0 3%;
     }
+
+    .shinny-height {
+        height: 30%;
+    }    
+
+    /* .shinny-text {
+        font-size: 1vmax;
+    } */
 }
 
 @media screen and (max-width: 768px) {
     .small-text {
-        font-size: 1.5vmax;
+        font-size: 1.8vmax;
     }
 
     .smaller-text-mobile {
-        font-size: 1.3vmax;
+        font-size: 1.4vmax;
     }
 }
