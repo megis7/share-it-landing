@@ -60,7 +60,8 @@ html, body {
 
 .about-text {
     text-shadow: 0 4px 2px rgba(0,0,0,.6);
-    font-size: 1.8vmax;
+    font-size: 2.0vmax;
+    color: #f49f64;
 }
 
 .btn-ecrou {
@@ -85,4 +86,16 @@ span.line {
 
 /* Tablet */
 @media screen and (max-width: 768px) {
+
+    .logo-text {
+        font-size: 1.5vmax;
+    }
+
+    .dev-text {
+        font-size: 1.3vmax;
+    }
+
+    .action-text {
+        font-size: 1.6vmax;
+    }
 }
