@@ -2,11 +2,6 @@ html, body {
     height:100%;
 }
 
-
-/* .carousel {
-    margin-bottom: 60px;
-} */
-
 .carousel-caption {
     z-index: 10;
 }
@@ -33,14 +28,6 @@ html, body {
     color: black;
 }
 
-.moderate-text {
-    font-size: 1.4vmax;
-}
-
-.small-text {
-    font-size: 1.2vmax;
-}
-
 .rounded-corners {
     border-radius: 20px 20px 5px 5px;
     border: 2px solid rgba(133, 133, 133, 0.75);
@@ -54,26 +41,48 @@ html, body {
     height: 50%;
 }
 
+.banner-text {
+    text-shadow: 0 4px 2px rgba(0,0,0,.6);
+    font-size: 2.6vmax;
+}
+
+.logo-text {
+    font-size: 1.3vmax;
+}
+
+.dev-text {
+    font-size: 1.0vmax;
+}
+
+.action-text {
+    font-size: 1.3vmax;
+}
+
+.about-text {
+    text-shadow: 0 4px 2px rgba(0,0,0,.6);
+    font-size: 1.8vmax;
+}
+
+.btn-ecrou {
+    border-color:#f49f64; 
+    background-color:#f49f64;
+}
+
+span.line {
+    display: inline-block;
+}
+
+/* Mobile */
 @media screen and (max-width: 576px) {
     .mobile-margin {
         margin: 0 3%;
     }
 
     .shinny-height {
-        height: 30%;
-    }    
-
-    /* .shinny-text {
-        font-size: 1vmax;
-    } */
+        height: 35%;
+    }
 }
 
+/* Tablet */
 @media screen and (max-width: 768px) {
-    .small-text {
-        font-size: 1.8vmax;
-    }
-
-    .smaller-text-mobile {
-        font-size: 1.4vmax;
-    }
 }
