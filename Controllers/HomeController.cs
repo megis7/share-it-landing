@@ -32,6 +32,7 @@ namespace shareit.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public IActionResult Subscribe(string email)
         {
+            System.Console.WriteLine($"email {email}");
             Subscriber model = new Subscriber()
             {
                 Email = email,

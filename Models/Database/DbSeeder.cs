@@ -8,10 +8,7 @@ namespace shareit.Models.Database
     public static class DbSeeder
     {
         public static void Initialize(ShareItContext context)
-        {
-            // ! REMOVE THIS LINE
-            context.Database.EnsureDeleted();
-                
+        {                
             context.Database.EnsureCreated();
 
             if(context.Subscribers.Count() > 0)
