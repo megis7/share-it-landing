@@ -16,7 +16,6 @@ html, body {
 
 #carousel-overlay-div > .carousel-overlay {
     position: absolute;
-    /* left:4%; */
     z-index:1;
 }
 

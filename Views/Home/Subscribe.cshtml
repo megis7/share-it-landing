@@ -2,10 +2,23 @@
     <link href='@Url.Content("~/css/subscribed.css")' rel="stylesheet" type="text/css"/>
 }
 
+<div class="row flex-fill d-flex h-100" style="overflow: hidden;">
+    <picture class="w-100">
+        <source media="(min-width: 768px)" srcset="/images/landscape/subsc.jpg">
+        <source srcset="/images/portrait/subsc.jpg">
+        <img class="d-block w-100 h-100" src="/images/landscape/subsc.jpg">
+    </picture>
+</div>
 
-<div class="row h-100 justify-content-center align-items-center" style="padding-bottom: 8%;">
-    <p class="shinny-text text-center no-select">
-        Thank you for subscribing<br>
-        We will let you know when we are ready
-    </p>
+<div class="row w-100 d-flex align-items-end justify-content-center thank-text-height" style="position: absolute; margin-right: 0; padding: 0px 10px;">
+    <div style="position: relative" class="w-100">
+        <div class="thank-bg w-100"></div>
+        <div class="thank-wrapper">
+            <p class="thank-text text-center no-select">
+                Thank you for subscribing<br>
+                We will let you know when we are ready.
+            </p>
+        </div>
+    </div>
+    
 </div>

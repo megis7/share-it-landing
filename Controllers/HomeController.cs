@@ -48,10 +48,16 @@ namespace shareit.Controllers
             return View("Subscribe");
         }
 
+        [HttpGet("Home/Data-this-should-not-be-accessed")]
         public IActionResult Data()
         {
             var emails = JsonConvert.SerializeObject(context.Subscribers.ToList());
             return View((object)emails);
+        }
+
+        public IActionResult Refresh()
+        {
+            return Ok("Hello");
         }
 
         public IActionResult Contact()
