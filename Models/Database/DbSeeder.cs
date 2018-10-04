@@ -7,10 +7,10 @@ namespace shareit.Models.Database
 {
     public static class DbSeeder
     {
-        public static void Initialize(ShareItContext context, bool recreate)
+        public static void Initialize(ShareItContext context)
         {
-            if(recreate)
-                context.Database.EnsureDeleted();
+            // ! REMOVE THIS LINE
+            context.Database.EnsureDeleted();
                 
             context.Database.EnsureCreated();
 

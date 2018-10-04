@@ -30,6 +30,7 @@ html, body {
 .rounded-corners {
     border-radius: 20px 20px 5px 5px;
     border: 2px solid rgba(133, 133, 133, 0.75);
+    background-color: rgba(133, 133, 133, 0.75);
 }
 
 .orbitron-font {
@@ -106,7 +107,12 @@ span.line {
     .about-text-wrapper {
         position: relative;
         z-index: 100;
-        padding: 5px 10px 0px 10px;
+        padding: 15px 10px 0px 10px;
+    }
+
+    .rounded-corners {
+        border: 2px solid rgba(133, 133, 133, 0.85);
+        background-color: rgba(133, 133, 133, 0.85);
     }
 }
 
