@@ -50,6 +50,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
                 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
                 crossorigin="anonymous"></script>
+
+        <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
 
     <environment exclude="Development">
@@ -65,8 +67,19 @@
                 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
                 crossorigin="anonymous"></script>
                 
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
+
+    <!-- <script>
+        $( document ).ready(function() {
+        $("#myCarousel").on("slide.bs.carousel", function(ev) {
+            var lazy;
+            lazy = $(ev.relatedTarget).find("img[data-src]");
+            lazy.attr("src", lazy.data('src'));
+            lazy.removeAttr("data-src");
+        });
+    });     
+    </script> -->
 
     @RenderSection("Scripts", required: false)
 </body>

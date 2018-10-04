@@ -1,5 +1,12 @@
-﻿@{
+﻿@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@{
     ViewData["Title"] = "Home Page";
+    var landscapeImages = Enumerable.Range(1, 7).Select(i => $"/images/landscape/image{i}.jpg");
+    var portraitImages = Enumerable.Range(1, 7).Select(i => $"/images/portrait/image{i}.jpg");
+
+    var images = landscapeImages.Zip(portraitImages, (x, y) => new {landscape=x, portrait=y}).ToList();
 }
 
 @section Styles {
@@ -33,7 +40,7 @@
 
             <div class="col-lg-6 col-md-7 col-xs-12 d-flex align-items-start">
                 <div class="row flex-fill d-flex">
-                    <div class="card col-lg-9 rounded-corners" style="background-color: rgba(133, 133, 133, 0.75);">
+                    <div class="card col-lg-9 rounded-corners" style="background-color: rgba(133, 133, 133, 0.75); ">
                         <div class="card-body">
                             <div class="card-text">
                                 <div class="row justify-content-center">
@@ -100,14 +107,38 @@
 
 <!-- Carousel -->
 <div class="row flex-fill d-flex h-100" style="overflow: hidden; margin-right:0">
-    <div id="myCarousel" class="carousel slide w-100" data-ride="carousel" data-pause="false" data-interval="3000" >
+    <div id="myCarousel" class="carousel slide lazy w-100" data-ride="carousel" data-pause="false" data-interval="3000" >
         <div class="carousel-inner w-100 h-100" >
-            <div class="carousel-item h-100 active"><img class="d-block w-100 h-100" src="~/images/jet_ski.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" src="~/images/parachute_1.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" src="~/images/parachute_2.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" src="~/images/parachute_3.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" src="~/images/ski_1.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" src="~/images/ski_2.jpg"></div>
+
+            <!-- Async images -->
+            <!-- <div class="carousel-item h-100 active"><img class="d-block w-100 h-100" src="/images/landscape/image1.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image2.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image3.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image4.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image5.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image6.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image7.jpg"></div> -->
+
+            <!-- Responsive images but they are all loaded to find best match -->
+            <!-- <div class="carousel-item h-100 active"><img class="d-block w-100 h-100" srcset="/images/landscape/image1.jpg 1600w, /images/portrait/image1.jpg 800w" src="/images/landscape/image1.jpg"></div> -->
+            <!-- <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image2.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image3.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image4.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image5.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image6.jpg"></div>
+            <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image7.jpg"></div> -->
+
+            @foreach(var dir in images)
+            {
+                <div class='carousel-item h-100 @(dir == images[0] ? "active" : "" )'>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset=@dir.landscape>
+                        <source srcset=@dir.portrait>
+                        <img class="d-block w-100 h-100" src=@dir.landscape>
+                    </picture>
+                </div>
+            }
+
         </div>
     </div>
 </div>
