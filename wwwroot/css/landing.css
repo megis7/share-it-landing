@@ -63,6 +63,27 @@ html, body {
     color: #f49f64;
 }
 
+.about-text-bg {
+    position: absolute;
+    top: 0%;
+    right: 0px;
+    bottom: 0;
+    left: 0px;
+    z-index: 99;
+
+    -webkit-filter: blur(10px);
+    background-position: center -70px;
+    filter: url('/media/blur.svg#blur');
+    filter: blur(10px);
+    background: rgba(34,34,34,0.75);
+}
+
+.about-text-wrapper {
+    position: relative;
+    z-index: 100;
+    padding: 20px;
+}
+
 .btn-ecrou {
     border-color:#f49f64; 
     background-color:#f49f64;
@@ -79,7 +100,13 @@ span.line {
     }
 
     .shinny-height {
-        height: 35%;
+        height: 30%;
+    }
+
+    .about-text-wrapper {
+        position: relative;
+        z-index: 100;
+        padding: 5px 10px 0px 10px;
     }
 }
 
