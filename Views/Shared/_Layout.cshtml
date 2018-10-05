@@ -23,7 +23,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         
-        gtag('config', 'UA-126369032-1');
+        gtag('config', 'UA-126369032-2');
     </script>
 
     @RenderSection("Styles", false)
@@ -69,17 +69,6 @@
                 
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
-
-    <!-- <script>
-        $( document ).ready(function() {
-        $("#myCarousel").on("slide.bs.carousel", function(ev) {
-            var lazy;
-            lazy = $(ev.relatedTarget).find("img[data-src]");
-            lazy.attr("src", lazy.data('src'));
-            lazy.removeAttr("data-src");
-        });
-    });     
-    </script> -->
 
     @RenderSection("Scripts", required: false)
 </body>
