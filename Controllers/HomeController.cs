@@ -24,11 +24,6 @@ namespace shareit.Controllers
             return View();
         }
 
-        public IActionResult Subscribe()
-        {
-            return View("Subscribe");
-        }
-
         [HttpPost, ValidateAntiForgeryToken]
         public IActionResult Subscribe(string email)
         {
@@ -59,18 +54,6 @@ namespace shareit.Controllers
         public IActionResult Refresh()
         {
             return Ok("Hello");
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

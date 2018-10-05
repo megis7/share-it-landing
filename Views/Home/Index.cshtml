@@ -58,7 +58,7 @@
                                 <div class="row d-none d-md-block" style="height: 1em;"></div>
 
                                 <div class="row justify-content-center">
-                                    <p class="col-xs-12 no-select black-text text-center dev-text"> <!-- TODO: Remove span if not needed-->
+                                    <p class="col-xs-12 no-select black-text text-center dev-text">
                                     Our services are still under development.<br/><span>Subscribe and get notified when we are ready.</span></p>
                                 </div>
 
@@ -86,14 +86,10 @@
 
             <div class="col-lg-6 col-md-5 col-xs-12 d-flex align-items-baseline">
                 <div class="col">
-                <div class="row"> <!-- TODO: Check these breakings -->
+                <div class="row">
                     <div class="about-text-bg"></div>
                         <div class="about-text-wrapper">
                             <p class="no-select text-center about-text">
-                                <!-- <span class="line"><em>Share It</em>’s mission is to connect individuals</span>
-                                <span class="line">who want to rent athletic equipment and clothes at low prices</span>
-                                <span class="line">with others who want to profit from their unused items.</span> -->
-
                                 <span><em>Share It</em>'s mission is to connect individuals</span>
                                 <span>who want to rent athletic equipment and clothes at low prices</span>
                                 <span>with others who want to profit from their unused items.</span>
@@ -108,27 +104,8 @@
 
 <!-- Carousel -->
 <div class="row flex-fill d-flex h-100" style="overflow: hidden; margin-right:0">
-    <div id="myCarousel" class="carousel slide lazy w-100" data-ride="carousel" data-pause="false" data-interval="3000" >
+    <div id="myCarousel" class="carousel slide lazy w-100" data-ride="carousel" data-pause="false" data-interval="5000" >
         <div class="carousel-inner w-100 h-100" >
-
-            <!-- Async images -->
-            <!-- <div class="carousel-item h-100 active"><img class="d-block w-100 h-100" src="/images/landscape/image1.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image2.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image3.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image4.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image5.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image6.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" data-src="/images/landscape/image7.jpg"></div> -->
-
-            <!-- Responsive images but they are all loaded to find best match -->
-            <!-- <div class="carousel-item h-100 active"><img class="d-block w-100 h-100" srcset="/images/landscape/image1.jpg 1600w, /images/portrait/image1.jpg 800w" src="/images/landscape/image1.jpg"></div> -->
-            <!-- <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image2.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image3.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image4.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image5.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image6.jpg"></div>
-            <div class="carousel-item h-100"><img class="d-block w-100 h-100" srcset="" src="/images/landscape/image7.jpg"></div> -->
-
             @foreach(var dir in images)
             {
                 <div class='carousel-item h-100 @(dir == images[0] ? "active" : "" )'>
